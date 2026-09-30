@@ -6,11 +6,12 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
         <style>
-            header { background-color: #b20550; height: 80px; line-height: 80px; text-align: center; letter-spacing: 5px; color: rgb(246, 210, 223); font-family: 'Pacifico', cursive; font-size: 40px; }
-            nav { margin-right: 20px; } /* Zodat de tekst niet in mijn menu gaat zitten */
+            header { position: relative; background-color: #b20550; height: 80px; line-height: 80px; text-align: center; letter-spacing: 5px; color: rgb(246, 210, 223); font-family: 'Pacifico', cursive; font-size: 40px; }
+            header::after { content: ""; position: absolute; left: 0; right: 0; bottom: -18px; height: 18px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 18'%3E%3Cpath d='M0 0 H40 V8 C30 8 30 18 20 18 C10 18 10 8 0 8 Z' fill='%23b20550'/%3E%3C/svg%3E") repeat-x; background-size: 40px 18px; }
             body { margin: 0; font-family: Arial, sans-serif; }
-            nav { float: left; width: 200px; height: calc(100vh - 80px); background-color: #b20550; }
-            nav ul { list-style-type: none; margin: 0; padding: 0; }
+            nav { position: relative; float: left; width: 200px; height: calc(100vh - 80px); background-color: #b20550; margin-right: 30px; }
+            nav::after { content: ""; position: absolute; top: 0; right: -18px; width: 18px; height: 100%; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 40'%3E%3Cpath d='M0 0 H8 C8 10 18 10 18 20 C18 30 8 30 8 40 H0 Z' fill='%23b20550'/%3E%3C/svg%3E") repeat-y; background-size: 18px 40px; }
+            nav ul { list-style-type: none; margin: 0; padding: 18px 0 0 0; }
             nav a { display: block; padding: 14px 20px; color: rgb(246, 210, 223); text-decoration: none; }
             nav a:hover { background-color: #f9d0ea; color: #b20550; }
         </style>
