@@ -1,74 +1,81 @@
 <!DOCTYPE html> <!--Dit is de homepagina van mijn site-->
 <html>
     <head>
-        <title>Het eerste begin</title>
-        <meta charset="utf-8">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+        <title>Het eerste begin</title> 
+        <meta charset="utf-8"> <!-- Zorgt dat speciale tekens zoals ë en emoji goed worden getoond -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> <!-- Haalt het schrijflettertype Pacifico op -->
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet"> <!-- Maakt het lettertyp in dikgedrukt -->
         
         <style>
-            header { position: relative; background-color: #b20550; height: 80px; line-height: 80px; text-align: center; letter-spacing: 5px; color: rgb(246, 210, 223); font-family: 'Pacifico', cursive; font-size: 40px; }
-            header::after { content: ""; position: absolute; left: 0; right: 0; bottom: -18px; height: 18px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 18'%3E%3Cpath d='M0 0 H40 V8 C30 8 30 18 20 18 C10 18 10 8 0 8 Z' fill='%23b20550'/%3E%3C/svg%3E") repeat-x; background-size: 40px 18px; }
-            body { margin: 0; font-family: Arial, sans-serif; background-color: #f5f0e6; }
-            nav { position: relative; float: left; width: 200px; height: calc(100vh - 80px); background-color: #b20550; margin-right: 30px; }
-            nav::after { content: ""; position: absolute; top: 0; right: -18px; width: 18px; height: 100%; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 40'%3E%3Cpath d='M0 0 H8 C8 10 18 10 18 20 C18 30 8 30 8 40 H0 Z' fill='%23b20550'/%3E%3C/svg%3E") repeat-y; background-size: 18px 40px; }
-            nav ul { list-style-type: none; margin: 0; padding: 18px 0 0 0; }
-            nav li { margin-bottom: 15px; }
-            nav a { display: block; padding: 14px 20px; color: rgb(246, 210, 223); text-decoration: none; font-family: 'Quicksand', sans-serif; font-size: 16px; font-weight: 700; }
-            nav a:hover { background-color: #f9d0ea; color: #b20550; }
+            /* ===== BOVENBALK ===== */
+            header { position: relative; background-color: #b20550; height: 80px; line-height: 80px; text-align: center; letter-spacing: 5px; color: rgb(246, 210, 223); font-family: 'Pacifico', cursive; font-size: 40px; } /* De rode balk bovenaan. line-height gelijk aan height zet de tekst verticaal in het midden, letter-spacing rekt de letters uit */
+            header::after { content: ""; position: absolute; left: 0; right: 0; bottom: -18px; height: 18px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 18'%3E%3Cpath d='M0 0 H40 V8 C30 8 30 18 20 18 C10 18 10 8 0 8 Z' fill='%23b20550'/%3E%3C/svg%3E") repeat-x; background-size: 40px 18px; } /* Tekent een golfrand onder de balk. ::after maakt een extra stukje, het plaatje (SVG) wordt naast elkaar herhaald (repeat-x) */
 
-            main { overflow: hidden; padding: 30px 40px 30px 0; }
-            main h1 { font-family: 'Pacifico', cursive; font-weight: normal; font-size: 36px; color: #b20550; margin: 0 0 10px; }
-            .intro { font-size: 18px; color: #555; margin: 0 0 25px; }
-            .kaarten { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
-            .kaart { background-color: white; border: 3px solid #f9d0ea; border-radius: 20px; padding: 20px; transition: transform 0.2s; }
-            .kaart:hover { transform: translateY(-5px); border-color: #b20550; }
-            .kaart h2 { font-family: 'Pacifico', cursive; font-weight: normal; font-size: 24px; color: #b20550; margin: 0 0 10px; }
-            .kaart p { margin: 6px 0; line-height: 1.5; color: #333; }
+            /* ===== ALGEMEEN ===== */
+            body { margin: 0; font-family: Arial, sans-serif; background-color: #f5f0e6; } /* Haalt de standaard rand weg, stelt het lettertype in en geeft de pagina een beige achtergrond */
 
-            main h1::after { content: ""; display: block; height: 12px; margin-top: 6px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 12'%3E%3Cpath d='M0 6 Q10 0 20 6 T40 6' fill='none' stroke='%23b20550' stroke-width='2'/%3E%3C/svg%3E") repeat-x; background-size: 40px 12px; }
+            /* ===== MENU ===== */
+            nav { position: relative; float: left; width: 200px; height: calc(100vh - 80px); background-color: #b20550; margin-right: 30px; } /* Het menu links. float: left zet het links van de tekst, calc(100vh - 80px) maakt het net zo hoog als het scherm min de bovenbalk */
+            nav::after { content: ""; position: absolute; top: 0; right: -18px; width: 18px; height: 100%; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 40'%3E%3Cpath d='M0 0 H8 C8 10 18 10 18 20 C18 30 8 30 8 40 H0 Z' fill='%23b20550'/%3E%3C/svg%3E") repeat-y; background-size: 18px 40px; } /* Golfrand aan de rechterkant van het menu, herhaald naar beneden (repeat-y) */
+            nav ul { list-style-type: none; margin: 0; padding: 18px 0 0 0; } /* Haalt de bolletjes van de lijst weg en laat ruimte boven het eerste item */
+            nav li { margin-bottom: 15px; } /* Ruimte tussen de menu-items */
+            nav a { display: block; padding: 14px 20px; color: rgb(246, 210, 223); text-decoration: none; font-family: 'Quicksand', sans-serif; font-size: 16px; font-weight: 700; } /* De links in het menu. display: block maakt het hele vlak klikbaar, text-decoration: none haalt de onderstreping weg */
+            nav a:hover { background-color: #f9d0ea; color: #b20550; } /* Andere kleuren als je met de muis over een menu-item gaat */
 
-            footer { clear: both; position: relative; margin-top: 50px; background-color: #b20550; height: 60px; line-height: 60px; text-align: center; color: rgb(246, 210, 223); font-family: 'Pacifico', cursive; font-size: 20px; }
-            footer::before { content: ""; position: absolute; left: 0; right: 0; top: -18px; height: 18px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 18'%3E%3Cpath d='M0 18 H40 V10 C30 10 30 0 20 0 C10 0 10 10 0 10 Z' fill='%23b20550'/%3E%3C/svg%3E") repeat-x; background-size: 40px 18px; }
+            /* ===== INHOUD ===== */
+            main { overflow: hidden; padding: 30px 40px 30px 0; } /* Het vak met de tekst naast het menu. overflow: hidden zorgt dat het netjes naast het menu blijft staan */
+            main h1 { font-family: 'Pacifico', cursive; font-weight: normal; font-size: 36px; color: #b20550; margin: 0 0 10px; } /* De grote titel bovenaan de inhoud */
+            .intro { font-size: 18px; color: #555; margin: 0 0 25px; } /* De korte introductietekst onder de titel */
+            .kaarten { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; } /* Zet de kaartjes in een rooster. auto-fit maakt zoveel kolommen als er passen, elk minimaal 240px breed, met 20px ruimte ertussen */
+            .kaart { background-color: white; border: 3px solid #f9d0ea; border-radius: 20px; padding: 20px; transition: transform 0.2s; } /* Eén kaartje: wit met een roze rand en ronde hoeken. transition zorgt dat de beweging soepel gaat */
+            .kaart:hover { transform: translateY(-5px); border-color: #b20550; } /* Als je met de muis op een kaartje gaat, springt het 5px omhoog en wordt de rand rood */
+            .kaart h2 { font-family: 'Pacifico', cursive; font-weight: normal; font-size: 24px; color: #b20550; margin: 0 0 10px; } /* De titel in elk kaartje */
+            .kaart p { margin: 6px 0; line-height: 1.5; color: #333; } /* De tekst in elk kaartje. line-height maakt de regels iets ruimer */
+
+            main h1::after { content: ""; display: block; height: 12px; margin-top: 6px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 12'%3E%3Cpath d='M0 6 Q10 0 20 6 T40 6' fill='none' stroke='%23b20550' stroke-width='2'/%3E%3C/svg%3E") repeat-x; background-size: 40px 12px; } /* Golvende lijn onder de titel */
+
+            /* ===== VOETBALK ===== */
+            footer { clear: both; position: relative; margin-top: 50px; background-color: #b20550; height: 60px; line-height: 60px; text-align: center; color: rgb(246, 210, 223); font-family: 'Pacifico', cursive; font-size: 20px; } /* De rode balk onderaan. clear: both zorgt dat hij onder het menu komt te staan */
+            footer::before { content: ""; position: absolute; left: 0; right: 0; top: -18px; height: 18px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 18'%3E%3Cpath d='M0 18 H40 V10 C30 10 30 0 20 0 C10 0 10 10 0 10 Z' fill='%23b20550'/%3E%3C/svg%3E") repeat-x; background-size: 40px 18px; } /* Golfrand boven de voetbalk (::before zet het stukje ervoor) */
         </style>
     </head>
     <body>
-      <header>Robin Feenstra</header>
+      <header>Robin Feenstra</header> <!-- De balk bovenaan met mijn naam -->
 
-      <nav>
+      <nav> <!-- Het menu met links naar mijn andere pagina's -->
            <ul>
-           <li><a href="index.html">Home</a></li>
+           <li><a href="index.html">Home</a></li> 
            <li><a href="binair.html">Binairstelsel</a> </li><!--Link naar binar-->
            <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
            </ul>
       </nav>
 
-      <main>
+      <main> <!-- Hier staat de inhoud van de pagina -->
           <h1>Over mij!</h1>
           <p class="intro">Hier lees je meer over mij, mijn hobby's en mijn school.</p>
 
-          <div class="kaarten">
-              <div class="kaart">
+          <div class="kaarten"> <!-- Houder voor alle kaartjes en rooster op toegepast -->
+              <div class="kaart"> <!-- Kaartje 1-->
                   <h2>⚽ Voetbal</h2>
-                  <p><strong>Team:</strong> Mo 20-1 op SJZ</p>
+                  <p><strong>Team:</strong> Mo 20-1 op SJZ</p> <!--strong is dikgedrukt-->
                   <p><strong>Positie:</strong> links midden, achter en voor</p>
                   <p><strong>Training:</strong> dinsdag en donderdag</p>
               </div>
 
-              <div class="kaart">
+              <div class="kaart"> <!-- Kaartje 2-->
                   <h2>🎨 Creatief bezig zijn</h2>
                   <p><strong>Wat:</strong> tekenen, verven en knutselen</p>
                   <p><strong>Wanneer:</strong> in mijn vrije tijd als ik zin heb</p>
               </div>
 
-              <div class="kaart">
+              <div class="kaart"> <!-- Kaartje 3-->
                   <h2>👯 Afspreken</h2>
                   <p><strong>Met:</strong> vriendinnen binnen en buiten mijn dorp</p>
                   <p><strong>Scouting:</strong> gezelligheid met de meiden</p>
               </div>
 
-              <div class="kaart">
+              <div class="kaart"> <!-- Kaartje 4-->
                   <h2>🎒 School</h2>
                   <p><strong>Opleiding:</strong> vwo 5</p>
                   <p><strong>Favoriete vak:</strong> Biologie</p>
@@ -76,6 +83,6 @@
           </div>
       </main>
 
-      <footer>Robin Feenstra</footer>
+      <footer>Robin Feenstra</footer> <!-- De balk onderaan de pagina -->
     </body>
 </html>
