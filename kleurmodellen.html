@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+<!-- Dit is de pagina over kleurmodellen -->
 <html>
 <head>
     <title>Kleurmodellen</title>
-    <meta charset="utf-8">
+    <meta charset="utf-8">  <!-- Zorgt dat speciale tekens zoals ë en emoji goed worden getoond -->
 
     <!-- Hier haal ik twee lettertypes op bij Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -156,6 +157,12 @@
             line-height: 1.5;       /* iets ruimere regels */
             color: #333;
         }
+
+        /* De link in een kaartje: roze en dikgedrukt */
+        .kaart a {
+            color: #b20550;
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -169,9 +176,9 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="binair.html">Binairstelsel</a></li>
             <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
-            <Li><a href="Ai.html">Ai</a></Li>
-            <Li><a href="compressie.html">compressie</a></Li>
-            <Li><a href="Invoer - verwerking - uitvoer.html" >Invoer - verwerking - uitvoer</a></Li>
+            <li><a href="Ai.html">Ai</a></li>
+            <li><a href="compressie.html">Compressie</a></li>
+            <li><a href="Invoer - verwerking - uitvoer.html">Invoer - verwerking - uitvoer</a></li>
         </ul>
     </nav>
 
@@ -183,7 +190,7 @@
         <!-- Eerste rij: het kaartje over pixels -->
         <div class="kaarten">
             <div class="kaart">
-                <h2> Pixels</h2>
+                <h2>🔍 Pixels</h2>
                 <p>Een afbeelding bestaat uit heel veel kleine puntjes: pixels.</p>
                 <p>Voor elke pixel bewaart de computer een reeks getallen die de kleur bepaalt. Het scherm zet die getallen weer om in een beeld.</p>
             </div>
@@ -192,7 +199,7 @@
         <!-- Tweede rij: de drie kleurmodellen -->
         <div class="kaarten">
             <div class="kaart">
-                <h2> RGB-model</h2>
+                <h2>💡 RGB-model</h2>
                 <p><strong>Gebruikt voor:</strong> beeldschermen</p>
                 <p>Een beeldscherm geeft licht af. Elke pixel bestaat uit drie lichtpuntjes: rood (Red), groen (Green) en blauw (Blue). Door elk lichtpuntje feller of zwakker te laten branden, ontstaan andere kleuren.</p>
                 <p>Hoe sterk elk lichtpuntje brandt, wordt vastgelegd met een getal. Elke kleur heeft dus zijn eigen combinatie van drie getallen.</p>
@@ -200,17 +207,27 @@
             </div>
 
             <div class="kaart">
-                <h2> CMY-model</h2>
+                <h2>🖨️ CMY-model</h2>
                 <p><strong>Gebruikt voor:</strong> printers</p>
                 <p>Papier is wit en geeft zelf geen licht af, maar weerkaatst het. Daarom gebruikt een printer cyaan, magenta en geel (Yellow). Je voegt inkt toe, en elke laag inkt neemt een deel van het licht weg.</p>
                 <p><strong>Subtractief model:</strong> je begint met een witte achtergrond en wordt steeds donkerder. In theorie geeft het mengen van alle drie zwart, maar in de praktijk wordt het meer donkerbruin of grijs.</p>
             </div>
 
             <div class="kaart">
-                <h2> CMYK-model</h2>
+                <h2>🎨 CMYK-model</h2>
                 <p><strong>Gebruikt voor:</strong> printers (verbeterde versie van CMY)</p>
                 <p>Daarom voegen printers zwarte inkt toe (K = <em>key</em>). Zo ontstaat het CMYK-model.</p>
                 <p>Dit geeft een dieper zwart en is bovendien goedkoper dan zwart maken met drie kleurinkten.</p>
+            </div>
+        </div>
+
+        <!-- Derde rij: het filmpje over kleurcode -->
+        <div class="kaarten">
+            <div class="kaart">
+                <h2>🎬 Filmpje</h2>
+                <p>Een leuk filmpje over kleurcode:</p>
+                <!-- target="_blank" opent de link in een nieuw tabblad -->
+                <p><a href="https://schooltv.nl/video-item/wat-is-een-kleurcode-elke-kleur-een-eigen-nummer?hash=aa56eab4" target="_blank">Wat is een kleurcode? Elke kleur een eigen nummer (SchoolTV)</a></p>
             </div>
         </div>
     </main>
