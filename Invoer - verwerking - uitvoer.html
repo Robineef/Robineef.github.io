@@ -1,39 +1,213 @@
-<!DOCTYPE html> <!--Dit is de homepagina van mijn site-->
+<!DOCTYPE html>
+<!-- Dit is de pagina over invoer, verwerking en uitvoer -->
 <html>
-    <head>
-        <title>Het eerste begin</title>
-        <meta charset="utf-8">
-       <link rel="preconnect" href="https://fonts.googleapis.com">
-       <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-       <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
-       
-       <style>
-            header { position: relative; background-color: #b20550; height: 80px; line-height: 80px; text-align: center; letter-spacing: 5px; color: rgb(246, 210, 223); font-family: 'Pacifico', cursive; font-size: 40px; }
-            header::after { content: ""; position: absolute; left: 0; right: 0; bottom: -18px; height: 18px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 18'%3E%3Cpath d='M0 0 H40 V8 C30 8 30 18 20 18 C10 18 10 8 0 8 Z' fill='%23b20550'/%3E%3C/svg%3E") repeat-x; background-size: 40px 18px; }
-            body { margin: 0; font-family: Arial, sans-serif; background-color: #f5f0e6; }
-            nav { position: relative; float: left; width: 200px; height: calc(100vh - 80px); background-color: #b20550; margin-right: 30px; }
-            nav::after { content: ""; position: absolute; top: 0; right: -18px; width: 18px; height: 100%; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 40'%3E%3Cpath d='M0 0 H8 C8 10 18 10 18 20 C18 30 8 30 8 40 H0 Z' fill='%23b20550'/%3E%3C/svg%3E") repeat-y; background-size: 18px 40px; }
-            nav ul { list-style-type: none; margin: 0; padding: 18px 0 0 0; }
-            nav li { margin-bottom: 15px; }
-            nav a { display: block; padding: 14px 20px; color: rgb(246, 210, 223); text-decoration: none; font-family: 'Quicksand', sans-serif; font-size: 16px; font-weight: 700; }
-            nav a:hover { background-color: #f9d0ea; color: #b20550; }
-        </style>
-    </head>
-    <body>
-      <header>Invoer - verwerking - uitvoer</header>
+<head>
+    <title>Invoer - verwerking - uitvoer</title>
+    <meta charset="utf-8">
 
-      <nav>
-           <ul>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== ALGEMEEN ===== */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f0e6;
+        }
+
+        /* ===== BOVENBALK ===== */
+        header {
+            position: relative;
+            background-color: #b20550;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+            letter-spacing: 5px;
+            color: rgb(246, 210, 223);
+            font-family: 'Pacifico', cursive;
+            font-size: 40px;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -18px;
+            height: 18px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 18'%3E%3Cpath d='M0 0 H40 V8 C30 8 30 18 20 18 C10 18 10 8 0 8 Z' fill='%23b20550'/%3E%3C/svg%3E") repeat-x;
+            background-size: 40px 18px;
+        }
+
+        /* ===== MENU ===== */
+        nav {
+            position: relative;
+            float: left;
+            width: 200px;
+            height: calc(100vh - 80px);
+            background-color: #b20550;
+            margin-right: 30px;
+        }
+
+        nav::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -18px;
+            width: 18px;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 40'%3E%3Cpath d='M0 0 H8 C8 10 18 10 18 20 C18 30 8 30 8 40 H0 Z' fill='%23b20550'/%3E%3C/svg%3E") repeat-y;
+            background-size: 18px 40px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 18px 0 0 0;
+        }
+
+        nav li {
+            margin-bottom: 15px;
+        }
+
+        nav a {
+            display: block;
+            padding: 14px 20px;
+            color: rgb(246, 210, 223);
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        nav a:hover {
+            background-color: #f9d0ea;
+            color: #b20550;
+        }
+
+        /* ===== INHOUD ===== */
+        main {
+            overflow: hidden;
+            padding: 30px 40px 30px 0;
+        }
+
+        main h1 {
+            font-family: 'Pacifico', cursive;
+            font-weight: normal;
+            font-size: 36px;
+            color: #b20550;
+            margin: 0 0 10px;
+        }
+
+        main h1::after {
+            content: "";
+            display: block;
+            height: 12px;
+            margin-top: 6px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 12'%3E%3Cpath d='M0 6 Q10 0 20 6 T40 6' fill='none' stroke='%23b20550' stroke-width='2'/%3E%3C/svg%3E") repeat-x;
+            background-size: 40px 12px;
+        }
+
+        .intro {
+            font-size: 18px;
+            color: #555;
+            margin: 0 0 25px;
+        }
+
+        /* ===== KAARTJES ===== */
+        .kaarten {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .kaart {
+            background-color: white;
+            border: 3px solid #f9d0ea;
+            border-radius: 20px;
+            padding: 20px;
+            transition: transform 0.2s;
+        }
+
+        .kaart:hover {
+            transform: translateY(-5px);
+            border-color: #b20550;
+        }
+
+        .kaart h2 {
+            font-family: 'Pacifico', cursive;
+            font-weight: normal;
+            font-size: 24px;
+            color: #b20550;
+            margin: 0 0 10px;
+        }
+
+        .kaart p {
+            margin: 6px 0;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        /* Het brede kaartje onderaan met de hele rij */
+        .kaart.breed {
+            grid-column: 1 / -1;       /* loopt over alle kolommen */
+            text-align: center;
+        }
+
+        .kaart.breed .rij {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 22px;
+            color: #b20550;
+        }
+    </style>
+</head>
+
+<body>
+    <header>Invoer - verwerking - uitvoer</header>
+
+    <nav>
+        <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="binair.html">Binairstelsel</a></li>
             <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
-            <Li><a href="Ai.html">Ai</a></Li>
-            <Li><a href="compressie.html">compressie</a></Li>
-            <Li><a href="Invoer - verwerking - uitvoer.html" >Invoer - verwerking - uitvoer</a></Li>
-           </ul>
-      </nav>
-      <br> <!-- dit is een Enter -->
-      Uitleg binair
-       
-    </body>
+            <li><a href="Ai.html">Ai</a></li>
+            <li><a href="compressie.html">Compressie</a></li>
+            <li><a href="Invoer - verwerking - uitvoer.html">Invoer - verwerking - uitvoer</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Invoer - verwerking - uitvoer</h1>
+        <p class="intro">Zo werkt een laptop in drie stappen.</p>
+
+        <div class="kaarten">
+
+            <div class="kaart">
+                <h2>⌨️ Invoer</h2>
+                <p>Met de invoer van een laptop wordt bedoeld: alles wat je aan de laptop vertelt of geeft.</p>
+                <p>De invoer kan van alles zijn, maar voordat een laptop iets kan doen, moet hij informatie krijgen in de vorm van invoer.</p>
+            </div>
+
+            <div class="kaart">
+                <h2>⚙️ Verwerking</h2>
+                <p>Na de invoer komt de verwerking. De laptop verwerkt de ontvangen informatie.</p>
+                <p>In deze stap maakt de laptop berekeningen, neemt hij beslissingen en voert hij de opdracht uit.</p>
+            </div>
+
+            <div class="kaart">
+                <h2>🖥️ Uitvoer</h2>
+                <p>De laatste stap is de uitvoer. Dit is het uiteindelijke resultaat van de gegeven opdracht.</p>
+                <p>Bij de uitvoer gaat het om de manier waarop de laptop de opdracht aan jou laat zien.</p>
+            </div>
+
+            <div class="kaart breed">
+                <h2>🔁 Samen</h2>
+                <p class="rij">invoer → verwerking → uitvoer</p>
+            </div>
+
+        </div>
+    </main>
+</body>
 </html>
