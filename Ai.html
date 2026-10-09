@@ -1,39 +1,250 @@
-<!DOCTYPE html> <!--Dit is de homepagina van mijn site-->
+<!DOCTYPE html>
+<!-- Dit is de Ai-pagina van mijn site -->
 <html>
-    <head>
-        <title>Het eerste begin</title>
-        <meta charset="utf-8">
-       <link rel="preconnect" href="https://fonts.googleapis.com">
-       <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-       <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
-       
-       <style>
-            header { position: relative; background-color: #b20550; height: 80px; line-height: 80px; text-align: center; letter-spacing: 5px; color: rgb(246, 210, 223); font-family: 'Pacifico', cursive; font-size: 40px; }
-            header::after { content: ""; position: absolute; left: 0; right: 0; bottom: -18px; height: 18px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 18'%3E%3Cpath d='M0 0 H40 V8 C30 8 30 18 20 18 C10 18 10 8 0 8 Z' fill='%23b20550'/%3E%3C/svg%3E") repeat-x; background-size: 40px 18px; }
-            body { margin: 0; font-family: Arial, sans-serif; background-color: #f5f0e6; }
-            nav { position: relative; float: left; width: 200px; height: calc(100vh - 80px); background-color: #b20550; margin-right: 30px; }
-            nav::after { content: ""; position: absolute; top: 0; right: -18px; width: 18px; height: 100%; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 40'%3E%3Cpath d='M0 0 H8 C8 10 18 10 18 20 C18 30 8 30 8 40 H0 Z' fill='%23b20550'/%3E%3C/svg%3E") repeat-y; background-size: 18px 40px; }
-            nav ul { list-style-type: none; margin: 0; padding: 18px 0 0 0; }
-            nav li { margin-bottom: 15px; }
-            nav a { display: block; padding: 14px 20px; color: rgb(246, 210, 223); text-decoration: none; font-family: 'Quicksand', sans-serif; font-size: 16px; font-weight: 700; }
-            nav a:hover { background-color: #f9d0ea; color: #b20550; }
-        </style>
-    </head>
-    <body>
-      <header>Ai</header>
+<head>
+    <title>Ai</title>
+    <meta charset="utf-8">  <!-- Zorgt dat speciale tekens zoals ë en emoji goed worden getoond -->
 
-      <nav>
-           <ul>
+    <!-- Hier haal ik twee lettertypes op bij Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== ALGEMEEN: kleur van de pagina en standaard lettertype ===== */
+        body {
+            margin: 0;                         /* haalt de standaard rand weg */
+            font-family: Arial, sans-serif;
+            background-color: #f5f0e6;         /* beige achtergrond */
+        }
+
+        /* ===== BOVENBALK: de roze balk met de titel ===== */
+        header {
+            position: relative;
+            background-color: #b20550;
+            height: 80px;
+            line-height: 80px;      /* zelfde als height: tekst staat in het midden */
+            text-align: center;
+            letter-spacing: 5px;    /* ruimte tussen de letters */
+            color: rgb(246, 210, 223);
+            font-family: 'Pacifico', cursive;
+            font-size: 40px;
+        }
+
+        /* De golfrand onder de balk: een klein plaatje dat steeds herhaald wordt */
+        header::after {
+            content: "";            /* ::after maakt een extra stukje achter de balk */
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -18px;
+            height: 18px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 18'%3E%3Cpath d='M0 0 H40 V8 C30 8 30 18 20 18 C10 18 10 8 0 8 Z' fill='%23b20550'/%3E%3C/svg%3E") repeat-x;  /* repeat-x: het plaatje wordt naast elkaar herhaald */
+            background-size: 40px 18px;
+        }
+
+        /* ===== MENU: de balk links ===== */
+        nav {
+            position: relative;
+            float: left;                  /* zet het menu links van de tekst */
+            width: 200px;
+            height: calc(100vh - 80px);   /* hoogte van het scherm min de bovenbalk */
+            background-color: #b20550;
+            margin-right: 30px;
+        }
+
+        /* De golfrand rechts van het menu */
+        nav::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -18px;
+            width: 18px;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 40'%3E%3Cpath d='M0 0 H8 C8 10 18 10 18 20 C18 30 8 30 8 40 H0 Z' fill='%23b20550'/%3E%3C/svg%3E") repeat-y;  /* repeat-y: herhaald naar beneden */
+            background-size: 18px 40px;
+        }
+
+        nav ul {
+            list-style-type: none;  /* haalt de bolletjes weg */
+            margin: 0;
+            padding: 18px 0 0 0;    /* ruimte boven het eerste item */
+        }
+
+        nav li {
+            margin-bottom: 15px;    /* ruimte tussen de menu-items */
+        }
+
+        nav a {
+            display: block;         /* het hele vlak is klikbaar */
+            padding: 14px 20px;
+            color: rgb(246, 210, 223);
+            text-decoration: none;  /* haalt de onderstreping weg */
+            font-family: 'Quicksand', sans-serif;
+            font-size: 16px;
+            font-weight: 700;       /* dikgedrukt */
+        }
+
+        /* Andere kleuren als je met de muis op een menu-item staat */
+        nav a:hover {
+            background-color: #f9d0ea;
+            color: #b20550;
+        }
+
+        /* ===== INHOUD: alles rechts van het menu ===== */
+        main {
+            overflow: hidden;           /* zorgt dat de inhoud netjes naast het menu blijft */
+            padding: 30px 40px 30px 0;
+        }
+
+        /* De grote titel bovenaan de inhoud */
+        main h1 {
+            font-family: 'Pacifico', cursive;
+            font-weight: normal;
+            font-size: 36px;
+            color: #b20550;
+            margin: 0 0 10px;
+        }
+
+        /* Golvende lijn onder de titel */
+        main h1::after {
+            content: "";
+            display: block;
+            height: 12px;
+            margin-top: 6px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 12'%3E%3Cpath d='M0 6 Q10 0 20 6 T40 6' fill='none' stroke='%23b20550' stroke-width='2'/%3E%3C/svg%3E") repeat-x;
+            background-size: 40px 12px;
+        }
+
+        /* De korte introductietekst onder de titel */
+        .intro {
+            font-size: 18px;
+            color: #555;
+            margin: 0 0 25px;
+        }
+
+        /* ===== KAARTJES ===== */
+        /* Het rooster: zoveel kolommen als er passen, elk minstens 240px breed */
+        .kaarten {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));  /* auto-fit past het aantal kolommen aan het scherm aan */
+            gap: 20px;                                                    /* ruimte tussen de kaartjes */
+        }
+
+        /* Eén kaartje: wit met roze rand en ronde hoeken */
+        .kaart {
+            background-color: white;
+            border: 3px solid #f9d0ea;
+            border-radius: 20px;
+            padding: 20px;
+            transition: transform 0.2s;   /* zorgt dat het springen soepel gaat */
+        }
+
+        /* Als je met de muis op een kaartje staat: 5px omhoog en rode rand */
+        .kaart:hover {
+            transform: translateY(-5px);
+            border-color: #b20550;
+        }
+
+        /* De titel in elk kaartje */
+        .kaart h2 {
+            font-family: 'Pacifico', cursive;
+            font-weight: normal;
+            font-size: 24px;
+            color: #b20550;
+            margin: 0 0 10px;
+        }
+
+        /* De tekst in elk kaartje */
+        .kaart p {
+            margin: 6px 0;
+            line-height: 1.5;       /* iets ruimere regels */
+            color: #333;
+        }
+
+        /* Lijstjes met streepjes of bolletjes in een kaartje */
+        .kaart ul {
+            margin: 6px 0;
+            padding-left: 20px;     /* ruimte links, zodat de bolletjes zichtbaar blijven */
+        }
+
+        .kaart li {
+            margin-bottom: 6px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        /* Het brede kaartje: loopt over alle kolommen heen */
+        .kaart.breed {
+            grid-column: 1 / -1;    /* van de eerste tot de laatste kolom */
+        }
+
+        /* De link naar het artikel: roze en dikgedrukt */
+        .kaart a {
+            color: #b20550;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Bovenbalk met de titel -->
+    <header>Ai</header>
+
+    <!-- Menu met links naar mijn pagina's -->
+    <nav>
+        <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="binair.html">Binairstelsel</a></li>
             <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
-            <Li><a href="Ai.html">Ai</a></Li>
-            <Li><a href="compressie.html">compressie</a></Li>
-            <Li><a href="Invoer - verwerking - uitvoer.html" >Invoer - verwerking - uitvoer</a></Li>
-           </ul>
-      </nav>
-      <br> <!-- dit is een Enter -->
-      Uitleg binair
-       
-    </body>
+            <li><a href="Ai.html">Ai</a></li>
+            <li><a href="compressie.html">Compressie</a></li>
+            <li><a href="Invoer - verwerking - uitvoer.html">Invoer - verwerking - uitvoer</a></li>
+        </ul>
+    </nav>
+
+    <!-- De inhoud van de pagina -->
+    <main>
+        <h1>Ai</h1>
+        <p class="intro">Hier lees je waar ik Ai voor gebruik, hoe het in mijn telefoon zit en wat ik las in het nieuws.</p>
+
+        <!-- Houder voor alle kaartjes (hier werkt het rooster op) -->
+        <div class="kaarten">
+
+            <!-- Kaartje 1: waar ik Ai voor gebruik -->
+            <div class="kaart">
+                <h2>🤖 Waar ik Ai voor gebruik</h2>
+                <ul>
+                    <li>Hulp bij huiswerk</li>
+                    <li>Ideeën voor tekeningen</li>
+                </ul>
+            </div>
+
+            <!-- Kaartje 2: mijn telefoon -->
+            <div class="kaart">
+                <h2>📱 Mijn telefoon</h2>
+                <ul>
+                    <li>Ik heb de iPhone 17e. Hij is gebouwd rond Apple Intelligence, het Ai-systeem van Apple.</li>
+                    <li>Het kan gebruikt worden voor Live Translation, Visual Intelligence, Call Screening en Hold Assist.</li>
+                    <li>Dit draait allemaal op een chip in de telefoon, de A19.</li>
+                </ul>
+            </div>
+
+            <!-- Kaartje 3: artikel over Ai (breed, dus over alle kolommen) -->
+            <div class="kaart breed">
+                <h2>📰 Artikel over Ai</h2>
+
+                <!-- Link naar het artikel (target="_blank" opent een nieuw tabblad) -->
+                <p><strong>Artikel:</strong> <a href="https://nos.nl/artikel/2631270-kritiek-op-ai-bedrijven-die-oproepen-tot-vertraging-vanwege-gevaar-doe-het-dan" target="_blank">Kritiek op AI-bedrijven die oproepen tot vertraging vanwege gevaar: 'Doe het dan' (NOS)</a></p>
+
+                <!-- Samenvatting van het artikel -->
+                <p><strong>Samenvatting:</strong> De topman van Anthropic, Dario Amodei, vindt dat de grootste Ai-bedrijven langzamer nieuwe, krachtige Ai-modellen moeten uitbrengen. Hij maakt zich zorgen dat Ai binnen zes tot twaalf maanden zo sterk wordt dat het gevaarlijk kan zijn voor het internet. Daarvoor wil hij wel hulp van de Amerikaanse overheid. Andere bedrijfsleiders vinden dat ook, maar er is veel kritiek. Een adviseur van president Trump zegt: als jullie willen vertragen, doe het dan gewoon zelf, want bedrijven zijn zelf verantwoordelijk voor veilige producten. Deskundigen twijfelen of de oproep oprecht is. Volgens hen willen de bedrijven misschien de schuld bij de overheid leggen als er iets misgaat, of regels die Chinese concurrenten benadelen. Het artikel noemt zelf ook dat bedrijven die je bang maken voor Ai een bekende marketingstrategie gebruiken.</p>
+
+                <!-- Mijn eigen mening (alleen het stukje "Mijn mening:" is dikgedrukt) -->
+                <p><strong>Mijn mening:</strong> Ik vind het erg schokkend dat Ai zo groot is geworden. Het is zo snel gegaan dat je bijna niet kunt bijhouden wat het allemaal kan.</p>
+            </div>
+
+        </div>
+    </main>
+</body>
 </html>
