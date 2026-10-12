@@ -171,24 +171,6 @@
             display: block;
             margin: 10px auto 0;
         }
-
-        /* Het YouTube-filmpje: houdt de breedte-hoogte verhouding van 16 op 9 */
-        .video {
-            position: relative;
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            margin-top: 10px;
-        }
-
-        .video iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-            border-radius: 12px;
-        }
     </style>
 </head>
 
@@ -222,23 +204,20 @@
             </div>
         </div>
 
-        <!-- Tweede rij: de afbeelding en het filmpje naast elkaar -->
+        <!-- Tweede rij: het plaatje en het filmpje naast elkaar -->
         <div class="kaarten">
-    <div class="kaart">
-        <h2>Hexadecimaal</h2>
-        <p>Zo ziet elk hexadecimaal symbool eruit in het binaire stelsel:</p>
-        <!-- Het plaatje moet in de map 'img' staan die in dezelfde map staat als deze pagina -->
-        <img src="img/hexadecimaal.png" alt="De hexadecimale symbolen in het binaire stelsel" style="max-width: 250px;">
-    </div>
-</div>
+            <div class="kaart">
+                <h2>Hexadecimaal</h2>
+                <p>Zo ziet elk hexadecimaal symbool eruit in het binaire stelsel:</p>
+                <!-- Vervang HIER-DE-LINK-VAN-JE-PLAATJE door de link van je plaatje van internet -->
+                <img src="HIER-DE-LINK-VAN-JE-PLAATJE" alt="De hexadecimale symbolen in het binaire stelsel" style="max-width: 250px;">
+            </div>
 
             <div class="kaart">
                 <h2>Filmpje</h2>
                 <p>Een uitlegfilmpje over het binaire stelsel:</p>
-                <!-- Dit is het YouTube-filmpje, ingebouwd in de pagina -->
-                <div class="video">
-                    <iframe src="https://www.youtube.com/embed/OpaB2SaNIyA" title="Uitleg over het binaire stelsel" allowfullscreen></iframe>
-                </div>
+                <!-- target="_blank" opent de link in een nieuw tabblad -->
+                <p><a href="https://www.youtube.com/watch?v=OpaB2SaNIyA" target="_blank">Bekijk het filmpje op YouTube</a></p>
             </div>
         </div>
 
