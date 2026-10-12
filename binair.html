@@ -1,39 +1,255 @@
-<!DOCTYPE html> <!--Dit is de homepagina van mijn site-->
+<!DOCTYPE html>
+<!-- Dit is de pagina over het binairstelsel -->
 <html>
-    <head>
-        <title>Het eerste begin</title>
-        <meta charset="utf-8">
-       <link rel="preconnect" href="https://fonts.googleapis.com">
-       <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-       <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
-       
-       <style>
-            header { position: relative; background-color: #b20550; height: 80px; line-height: 80px; text-align: center; letter-spacing: 5px; color: rgb(246, 210, 223); font-family: 'Pacifico', cursive; font-size: 40px; }
-            header::after { content: ""; position: absolute; left: 0; right: 0; bottom: -18px; height: 18px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 18'%3E%3Cpath d='M0 0 H40 V8 C30 8 30 18 20 18 C10 18 10 8 0 8 Z' fill='%23b20550'/%3E%3C/svg%3E") repeat-x; background-size: 40px 18px; }
-            body { margin: 0; font-family: Arial, sans-serif; background-color: #f5f0e6; }
-            nav { position: relative; float: left; width: 200px; height: calc(100vh - 80px); background-color: #b20550; margin-right: 30px; }
-            nav::after { content: ""; position: absolute; top: 0; right: -18px; width: 18px; height: 100%; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 40'%3E%3Cpath d='M0 0 H8 C8 10 18 10 18 20 C18 30 8 30 8 40 H0 Z' fill='%23b20550'/%3E%3C/svg%3E") repeat-y; background-size: 18px 40px; }
-            nav ul { list-style-type: none; margin: 0; padding: 18px 0 0 0; }
-            nav li { margin-bottom: 15px; }
-            nav a { display: block; padding: 14px 20px; color: rgb(246, 210, 223); text-decoration: none; font-family: 'Quicksand', sans-serif; font-size: 16px; font-weight: 700; }
-            nav a:hover { background-color: #f9d0ea; color: #b20550; }
-        </style>
-    </head>
-    <body>
-      <header>Binairstelsel</header>
+<head>
+    <title>Binairstelsel</title>
+    <meta charset="utf-8">  <!-- Zorgt dat speciale tekens zoals ë en emoji goed worden getoond -->
 
-      <nav>
-           <ul>
+    <!-- Hier haal ik twee lettertypes op bij Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== ALGEMEEN: kleur van de pagina en standaard lettertype ===== */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f0e6;
+        }
+
+        /* ===== BOVENBALK: de roze balk met de titel ===== */
+        header {
+            position: relative;
+            background-color: #b20550;
+            height: 80px;
+            line-height: 80px;      /* zelfde als height: tekst staat in het midden */
+            text-align: center;
+            letter-spacing: 5px;    /* ruimte tussen de letters */
+            color: rgb(246, 210, 223);
+            font-family: 'Pacifico', cursive;
+            font-size: 40px;
+        }
+
+        /* De golfrand onder de balk: een klein plaatje dat steeds herhaald wordt */
+        header::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -18px;
+            height: 18px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 18'%3E%3Cpath d='M0 0 H40 V8 C30 8 30 18 20 18 C10 18 10 8 0 8 Z' fill='%23b20550'/%3E%3C/svg%3E") repeat-x;
+            background-size: 40px 18px;
+        }
+
+        /* ===== MENU: de balk links ===== */
+        nav {
+            position: relative;
+            float: left;            /* zet het menu links van de tekst */
+            width: 200px;
+            height: calc(100vh - 80px);   /* hoogte van het scherm min de bovenbalk */
+            background-color: #b20550;
+            margin-right: 30px;
+        }
+
+        /* De golfrand rechts van het menu */
+        nav::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -18px;
+            width: 18px;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 40'%3E%3Cpath d='M0 0 H8 C8 10 18 10 18 20 C18 30 8 30 8 40 H0 Z' fill='%23b20550'/%3E%3C/svg%3E") repeat-y;
+            background-size: 18px 40px;
+        }
+
+        nav ul {
+            list-style-type: none;  /* haalt de bolletjes weg */
+            margin: 0;
+            padding: 18px 0 0 0;
+        }
+
+        nav li {
+            margin-bottom: 15px;
+        }
+
+        nav a {
+            display: block;         /* het hele vlak is klikbaar */
+            padding: 14px 20px;
+            color: rgb(246, 210, 223);
+            text-decoration: none;  /* haalt de onderstreping weg */
+            font-family: 'Quicksand', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        /* Andere kleuren als je met de muis op een menu-item staat */
+        nav a:hover {
+            background-color: #f9d0ea;
+            color: #b20550;
+        }
+
+        /* ===== INHOUD: alles rechts van het menu ===== */
+        main {
+            overflow: hidden;
+            padding: 30px 40px 30px 0;
+        }
+
+        main h1 {
+            font-family: 'Pacifico', cursive;
+            font-weight: normal;
+            font-size: 36px;
+            color: #b20550;
+            margin: 0 0 10px;
+        }
+
+        /* Golvende lijn onder de titel */
+        main h1::after {
+            content: "";
+            display: block;
+            height: 12px;
+            margin-top: 6px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 12'%3E%3Cpath d='M0 6 Q10 0 20 6 T40 6' fill='none' stroke='%23b20550' stroke-width='2'/%3E%3C/svg%3E") repeat-x;
+            background-size: 40px 12px;
+        }
+
+        .intro {
+            font-size: 18px;
+            color: #555;
+            margin: 0 0 25px;
+        }
+
+        /* ===== KAARTJES ===== */
+        /* Het rooster: zoveel kolommen als er passen, elk minstens 320px breed */
+        .kaarten {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Eén kaartje: wit met roze rand en ronde hoeken */
+        .kaart {
+            background-color: white;
+            border: 3px solid #f9d0ea;
+            border-radius: 20px;
+            padding: 20px;
+            transition: transform 0.2s;   /* zorgt dat het springen soepel gaat */
+        }
+
+        /* Als je met de muis op een kaartje staat: 5px omhoog en rode rand */
+        .kaart:hover {
+            transform: translateY(-5px);
+            border-color: #b20550;
+        }
+
+        .kaart h2 {
+            font-family: 'Pacifico', cursive;
+            font-weight: normal;
+            font-size: 24px;
+            color: #b20550;
+            margin: 0 0 10px;
+        }
+
+        .kaart p {
+            margin: 6px 0;
+            line-height: 1.5;       /* iets ruimere regels */
+            color: #333;
+        }
+
+        /* De link in een kaartje: roze en dikgedrukt */
+        .kaart a {
+            color: #b20550;
+            font-weight: bold;
+        }
+
+        /* De afbeelding in een kaartje: nooit breder dan het kaartje */
+        .kaart img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto 0;
+        }
+
+        /* Het YouTube-filmpje: houdt de breedte-hoogte verhouding van 16 op 9 */
+        .video {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            margin-top: 10px;
+        }
+
+        .video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Bovenbalk -->
+    <header>Binairstelsel</header>
+
+    <!-- Menu met links naar mijn pagina's -->
+    <nav>
+        <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="binair.html">Binairstelsel</a></li>
             <li><a href="kleurmodellen.html">Kleurmodellen</a></li>
-            <Li><a href="Ai.html">Ai</a></Li>
-            <Li><a href="compressie.html">compressie</a></Li>
-            <Li><a href="Invoer - verwerking - uitvoer.html" >Invoer - verwerking - uitvoer</a></Li>
-           </ul>
-      </nav>
-      <br> <!-- dit is een Enter -->
-      Uitleg binair
-       
-    </body>
+            <li><a href="Ai.html">Ai</a></li>
+            <li><a href="compressie.html">Compressie</a></li>
+            <li><a href="Invoer - verwerking - uitvoer.html">Invoer - verwerking - uitvoer</a></li>
+        </ul>
+    </nav>
+
+    <!-- De inhoud van de pagina -->
+    <main>
+        <h1>Rekenen met nullen en enen</h1>
+        <p class="intro">Een computer begrijpt maar twee cijfers: 0 en 1.</p>
+
+        <!-- Eerste rij: het kaartje met de uitleg -->
+        <div class="kaarten">
+            <div class="kaart">
+                <h2>Wat is het binaire stelsel?</h2>
+                <p>Het binaire stelsel is een rekenmethode die werkt met slechts twee cijfers: 0 (uit) en 1 (aan). Deze cijfers noemen we <strong>bits</strong>. Een reeks van 8 bits vormt een <strong>byte</strong>.</p>
+                <p>Computers gebruiken dit systeem omdat elektronische onderdelen heel eenvoudig tussen twee toestanden kunnen schakelen. Door bits te combineren en te vermenigvuldigen met machten van 2, kan een computer alle mogelijke gegevens opslaan en verwerken, van getallen en teksten tot foto's en video's.</p>
+            </div>
+        </div>
+
+        <!-- Tweede rij: de afbeelding en het filmpje naast elkaar -->
+        <div class="kaarten">
+            <div class="kaart">
+                <h2>Hexadecimaal</h2>
+                <p>Zo ziet elk hexadecimaal symbool eruit in het binaire stelsel:</p>
+                <!-- Het plaatje moet in dezelfde map staan als deze pagina -->
+                <img src="hexadecimaal.png" alt="De hexadecimale symbolen in het binaire stelsel" style="max-width: 250px;">
+            </div>
+
+            <div class="kaart">
+                <h2>Filmpje</h2>
+                <p>Een uitlegfilmpje over het binaire stelsel:</p>
+                <!-- Dit is het YouTube-filmpje, ingebouwd in de pagina -->
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/OpaB2SaNIyA" title="Uitleg over het binaire stelsel" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Derde rij: het spelletje -->
+        <div class="kaarten">
+            <div class="kaart">
+                <h2>Spelletje</h2>
+                <p>Oefen met binaire getallen in dit spel: Binary Bonanza.</p>
+                <!-- target="_blank" opent de link in een nieuw tabblad -->
+                <p><a href="https://games.penjee.com/binary-bonanza/" target="_blank">Speel Binary Bonanza</a></p>
+            </div>
+        </div>
+    </main>
+</body>
 </html>
