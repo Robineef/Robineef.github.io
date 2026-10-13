@@ -242,10 +242,19 @@
 
             <!-- Kaartje 3: het filmpje over Ai (staat naast het kaartje van mijn telefoon) -->
             <div class="kaart">
-                <h2>🎬 Filmpje</h2>
-                <p>Een leuk filmpje over Ai:</p>
-                <p><a href="https://www.youtube.com/watch?v=LjgtORzV4js" target="_blank">Bekijk het filmpje op YouTube</a></p>
-            </div>
+    <h2>🎬 Filmpje</h2>
+    <p>Een leuk filmpje over AI:</p>
+
+    <div class="video-container"
+         onclick="this.innerHTML='<iframe src=&quot;https://www.youtube.com/embed/LjgtORzV4js?autoplay=1&quot; title=&quot;Een leuk filmpje over AI&quot; allow=&quot;autoplay; encrypted-media; picture-in-picture&quot; allowfullscreen></iframe>'">
+
+        <img
+            src="https://img.youtube.com/vi/LjgtORzV4js/hqdefault.jpg"
+            alt="Bekijk het AI-filmpje">
+
+        <div class="afspeelknop">▶</div>
+    </div>
+</div>
 
             <!-- Kaartje 4: artikel over Ai (breed, dus over alle kolommen) -->
             <div class="kaart breed">
